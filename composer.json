@@ -13,7 +13,8 @@
         "php": ">=7",
         "magento/module-catalog": "^100|^101",
         "magento/module-review": "^100",
-        "magento/module-store": "^100"
+        "magento/module-store": "^100",
+        "magento/framework": "^100"
     },
     "autoload": {
         "files": [ "registration.php" ],
