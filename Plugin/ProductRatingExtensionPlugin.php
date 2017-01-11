@@ -33,6 +33,7 @@ class ProductRatingExtensionPlugin
         $storeId = $this->storeManager->getStore()->getId();
         $this->reviewFactory->create()->getEntitySummary($product, $storeId);
         $ratingSummary = (float)$product->getRatingSummary()->getRatingSummary();
+        $ratingsCount = $product->getRatingSummary()->getReviewsCount();
 
         $extensionAttributes = $product->getExtensionAttributes();
         if (null === $extensionAttributes) {
@@ -40,6 +41,7 @@ class ProductRatingExtensionPlugin
             $product->setExtensionAttributes($extensionAttributes);
         }
         $extensionAttributes->setAverageReviewRating($ratingSummary);
+        $extensionAttributes->setRatingsCount($ratingsCount);
 
         return $product;
     }
