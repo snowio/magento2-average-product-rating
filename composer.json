@@ -1,7 +1,7 @@
 {
     "name": "snowio/magento2-product-rating-extension",
     "license": "MIT",
-    "description": "A Magento 2 module which exposes product ratings as an extension attribute",
+    "description": "A Magento 2 module which exposes a products average ratings and rating count as an extension attribute",
     "type": "magento2-module",
     "authors": [
         {
