@@ -3,4 +3,5 @@
     <type name="Magento\Catalog\Api\ProductRepositoryInterface">
         <plugin name="ProductRatingExtensionPlugin" type="SnowIO\ProductRatingExtension\Plugin\ProductRatingExtensionPlugin" disabled="false" />
     </type>
+    <preference for="SnowIO\ProductRatingExtension\Api\ReviewRepositoryInterface" type="SnowIO\ProductRatingExtension\Model\ReviewRepository"/>
 </config>
