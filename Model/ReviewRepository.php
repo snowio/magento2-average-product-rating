@@ -2,6 +2,7 @@
 
 namespace SnowIO\ProductRatingExtension\Model;
 
+use Magento\Catalog\Api\ProductRepositoryInterface;
 use SnowIO\ProductRatingExtension\Api\Data\ProductReviewInterface;
 use SnowIO\ProductRatingExtension\Api\ReviewRepositoryInterface;
 use SnowIO\ProductRatingExtension\Model\ProductReviewFactory;
