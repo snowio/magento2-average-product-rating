@@ -4,4 +4,5 @@
         <plugin name="ProductRatingExtensionPlugin" type="SnowIO\ProductRatingExtension\Plugin\ProductRatingExtensionPlugin" disabled="false" />
     </type>
     <preference for="SnowIO\ProductRatingExtension\Api\ReviewRepositoryInterface" type="SnowIO\ProductRatingExtension\Model\ReviewRepository"/>
+    <preference for="SnowIO\ProductRatingExtension\Api\Data\ProductReviewInterface" type="SnowIO\ProductRatingExtension\Model\ProductReview"/>
 </config>
