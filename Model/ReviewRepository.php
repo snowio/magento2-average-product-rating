@@ -3,6 +3,7 @@
 namespace SnowIO\ProductRatingExtension\Model;
 
 use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Store\Api\Data\StoreInterface;
 use SnowIO\ProductRatingExtension\Api\Data\ProductReviewInterface;
 use SnowIO\ProductRatingExtension\Api\ReviewRepositoryInterface;
 use SnowIO\ProductRatingExtension\Model\ProductReviewFactory;
@@ -38,11 +39,14 @@ class ReviewRepository implements ReviewRepositoryInterface
     public function get($productSku)
     {
         $stores = $this->storeManager->getStores();
-        $storeIds = array_keys($stores);
         $product = $this->productRepository->get($productSku);
         $reviewsPerStore = [];
 
-        foreach ($storeIds as $storeId) {
+        /**
+         * @var int $storeId
+         * @var StoreInterface $store
+         */
+        foreach ($stores as $storeId => $store) {
             /** @var ProductReviewInterface $productReview */
             $productReview = $this->productReviewFactory->create();
             $this->reviewFactory->create()->getEntitySummary($product, $storeId);
@@ -50,7 +54,7 @@ class ReviewRepository implements ReviewRepositoryInterface
             $ratingsCount = $product->getRatingSummary()->getReviewsCount();
 
             $productReview
-                ->setStoreId($storeId)
+                ->setStoreCode($store->getCode())
                 ->setAverageRatingReview($averageReviewRating)
                 ->setRatingsCount($ratingsCount);
 

@@ -39,23 +39,23 @@ class ProductReview extends DataObject implements ProductReviewInterface
      */
     public function setRatingsCount($ratingCount)
     {
-       return $this->setData(ProductReviewInterface::REVIEW_COUNT, $ratingCount);
+        return $this->setData(ProductReviewInterface::REVIEW_COUNT, $ratingCount);
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getStoreId()
+    public function getStoreCode()
     {
-        return $this->getData(ProductReviewInterface::STORE_ID);
+        return $this->getData(ProductReviewInterface::STORE_CODE);
     }
 
     /**
-     * @param int $storeId
+     * @param string $storeCode
      * @return $this
      */
-    public function setStoreId($storeId)
+    public function setStoreCode($storeCode)
     {
-        return $this->setData(ProductReviewInterface::STORE_ID, $storeId);
+        return $this->setData(ProductReviewInterface::STORE_CODE, $storeCode);
     }
 }
