@@ -58,4 +58,21 @@ class ProductReview extends DataObject implements ProductReviewInterface
     {
         return $this->setData(ProductReviewInterface::STORE_CODE, $storeCode);
     }
+
+    /**
+     * @return int
+     */
+    public function getStoreId()
+    {
+        return $this->getData(ProductReviewInterface::STORE_ID);
+    }
+
+    /**
+     * @param int $storeId
+     * @return $this
+     */
+    public function setStoreId($storeId)
+    {
+        return $this->setData(ProductReviewInterface::STORE_ID, $storeId);
+    }
 }

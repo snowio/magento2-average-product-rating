@@ -6,6 +6,7 @@ interface ProductReviewInterface
     const AVERAGE_REVIEW_RATING = 'average_review_rating';
     const REVIEW_COUNT = 'review_count';
     const STORE_CODE = 'store_code';
+    const STORE_ID = 'store_id';
 
     /**
      * @return float
@@ -21,6 +22,11 @@ interface ProductReviewInterface
      * @return string
      */
     public function getStoreCode();
+
+    /**
+     * @return int
+     */
+    public function getStoreId();
 
     /**
      * @param  float $averageReviewRating
@@ -39,4 +45,10 @@ interface ProductReviewInterface
      * @return $this
      */
     public function setStoreCode($storeCode);
+
+    /**
+     * @param int $storeId
+     * @return $this
+     */
+    public function setStoreId($storeId);
 }

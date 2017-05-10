@@ -54,6 +54,7 @@ class ReviewRepository implements ReviewRepositoryInterface
             $ratingsCount = $product->getRatingSummary()->getReviewsCount();
 
             $productReview
+                ->setStoreId($storeId)
                 ->setStoreCode($store->getCode())
                 ->setAverageRatingReview($averageReviewRating)
                 ->setRatingsCount($ratingsCount);
