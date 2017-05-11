@@ -1,8 +1,5 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Catalog\Api\ProductRepositoryInterface">
-        <plugin name="ProductRatingExtensionPlugin" type="SnowIO\ProductRatingExtension\Plugin\ProductRatingExtensionPlugin" disabled="false" />
-    </type>
     <preference for="SnowIO\ProductRatingExtension\Api\ReviewRepositoryInterface" type="SnowIO\ProductRatingExtension\Model\ReviewRepository"/>
     <preference for="SnowIO\ProductRatingExtension\Api\Data\ProductReviewInterface" type="SnowIO\ProductRatingExtension\Model\ProductReview"/>
 </config>
